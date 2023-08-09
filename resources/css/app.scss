@@ -1,0 +1,33 @@
+$color1: #D6003D;
+$color2: #575756;
+$color3: #000000;
+$color4: #ffffff;
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+}
+
+body {
+    color: $color4;
+    background-color: $color1;
+    overflow-x: hidden;
+    // display: flex;
+    // flex-direction: column;
+}
+
+.theejs_render{
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    // bottom: 10%;
+}
