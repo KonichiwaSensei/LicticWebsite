@@ -1,9 +1,32 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/public/fonts/JosefinSans-ThinItalic.woff2') format('woff2'),
+        url('/public/fonts/fontsJosefinSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/public/fonts/JosefinSans-Thin.woff2') format('woff2'),
+        url('/public/fonts/JosefinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 @import './Navigator.scss';
+@import './MainPage.scss';
 
 $color1: #D6003D;
 $color2: #575756;
-$color3: #000000;
+$color3: #2E1E3A;
 $color4: #ffffff;
+$color5: #000000;
+
+$font_family: Josefin Sans;
 
 *,
 *:before,
@@ -14,7 +37,8 @@ $color4: #ffffff;
 }
 
 html {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: $font_family;
+    font-weight: 800;
     overflow-x: hidden;
 }
 
@@ -31,5 +55,4 @@ body {
     height: 100vh;
 
     position: absolute;
-    // bottom: 10%;
 }

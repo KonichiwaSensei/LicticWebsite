@@ -50,7 +50,7 @@ export default function LicticLogoModel() {
             <Canvas
                 // style={{ width: "200px", height: "200px" }}
             >
-                {/* <OrbitControls /> */}
+                {/* <OrbitControls/> */}
                 <Environment files="/images/abandoned_tiled_room_1k.hdr" />
                 {/* <ambientLight intensity={1}/> */}
                 {/* <pointLight position={[0, 1, 0]} intensity={100}/> */}

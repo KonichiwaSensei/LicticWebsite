@@ -30,7 +30,9 @@ export default function Navigator() {
                 </div>
 
                 <div className={menuClass}>
-                    <Link to="/" className="nav_menu_link_1">About Me</Link>
+                    <Link to="/" className="nav_menu_link">Home</Link>
+                    <Link to="/about_me" className="nav_menu_link">About Me</Link>
+                    <Link to="/another_link" className="nav_menu_link">Another Link</Link>
                 </div>
             </div>
         </>
