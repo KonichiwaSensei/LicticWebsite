@@ -5,7 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 
-export default function ThreejsTestThree() {
+export default function LicticLogoModel() {
 
     const Model = ({ mouseOffset }) => {
         const gltf = useLoader(GLTFLoader, "/images/LicticLogoTest.glb");

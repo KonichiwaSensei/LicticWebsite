@@ -1,15 +1,19 @@
-import ThreejsTest from "./ThreejsTests/ThreejsTest"
-import ThreejsTestTwo from "./ThreejsTests/ThreejsTestTwo"
-import ThreeTestThree from "./ThreejsTests/ThreeTestThree"
+import LicticLogoModel from "./ThreejsModels/LicticLogoModel"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import MainPage from "./MainPage"
+
 
 export default function App() {
     return (
         <>
-        {/* <ThreejsTest /> */}
-        {/* <ThreejsTestTwo /> */}
-        <ThreeTestThree />
-        {/* <h1>Hello World</h1> */}
-        
+            <BrowserRouter>
+            <LicticLogoModel />
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                </Routes>
+                
+            </BrowserRouter>
+
         </>
     )
 }

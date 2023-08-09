@@ -1,3 +1,5 @@
+@import './Navigator.scss';
+
 $color1: #D6003D;
 $color2: #575756;
 $color3: #000000;
@@ -11,7 +13,7 @@ $color4: #ffffff;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: 'Courier New', Courier, monospace;
     overflow-x: hidden;
 }
@@ -24,7 +26,7 @@ body {
     // flex-direction: column;
 }
 
-.theejs_render{
+.theejs_render {
     width: 100vw;
     height: 100vh;
 
