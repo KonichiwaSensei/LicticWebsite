@@ -1,24 +1,43 @@
 import LicticLogoModel from "./ThreejsModels/LicticLogoModel"
 import Navigator from "./Constants/Navigator"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MainPage from "./MainPage"
+
+import { ThemeContext } from "./ThemeContext"
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 
 
 export default function App() {
+
+    const [theme, setTheme] = useState("red")
+
+    useEffect(() => {
+        if (theme === "red") {
+            document.body.style.backgroundColor = "#D6003D";
+        } else if (theme === "purple") {
+            document.body.style.backgroundColor = "#2E1E3A";
+        }
+    }, [theme]);
+
     return (
         <>
-            <BrowserRouter>
+            <ThemeContext.Provider value={{theme, setTheme}}>
 
-                <Navigator />
+                <BrowserRouter>
 
-                <LicticLogoModel />
+                    <Navigator />
 
-                <Routes>
-                    <Route path="/" element={<MainPage />} />
-                </Routes>
+                    <LicticLogoModel />
 
-            </BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<MainPage />} />
+                    </Routes>
+
+                </BrowserRouter>
+
+            </ThemeContext.Provider>
         </>
     )
 }

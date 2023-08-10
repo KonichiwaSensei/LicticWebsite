@@ -1,13 +1,18 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
 import ThemeSelector from "./ThemeSelector"
 import TopMarquee from "./TopMarquee"
+
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
+import { ThemeContext } from "../ThemeContext"
 
 export default function Navigator() {
 
     const [burgerClass, setBurgerClass] = useState("burger-bar unclicked")
     const [menuClass, setMenuClass] = useState("menu hidden")
     const [menuClick, setMenuClick] = useState(false)
+
+    const { theme } = useContext(ThemeContext);
+
 
     const handleMenuDisplay = () => {
         if (!menuClick) {
@@ -33,19 +38,19 @@ export default function Navigator() {
 
                 <TopMarquee />
 
-                <div className="burger_menu" onClick={handleMenuDisplay}>
-                    <div className={burgerClass}></div>
-                    <div className={burgerClass}></div>
-                    <div className={burgerClass}></div>
+                <div className={"burger_menu" + " " + theme} onClick={handleMenuDisplay}>
+                    <div className={burgerClass + " " + theme}></div>
+                    <div className={burgerClass + " " + theme}></div>
+                    <div className={burgerClass + " " + theme}></div>
                 </div>
 
                 <ThemeSelector />
 
-                <div className={menuClass}>
-                    <Link to="/" className="nav_menu_link" onClick={handleLinkClick}>Home</Link>
-                    <Link to="/music" className="nav_menu_link" onClick={handleLinkClick}>Music</Link>
-                    <Link to="/web" className="nav_menu_link" onClick={handleLinkClick}>Web</Link>
-                    <Link to="/about_me" className="nav_menu_link" onClick={handleLinkClick}>About Me</Link>
+                <div className={menuClass + " " + theme}>
+                    <Link to="/" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>Home</Link>
+                    <Link to="/music" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>Music</Link>
+                    <Link to="/web" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>Web</Link>
+                    <Link to="/about_me" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>About Me</Link>
                 </div>
             </div>
         </>

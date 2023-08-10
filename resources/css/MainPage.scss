@@ -27,9 +27,15 @@ $color5: #000000;
             padding: 5%;
             font-size: 50px;
             text-shadow: 3px 3px 5px $color3;
+            transition: 0.5s ease-in-out;
 
             &.end{
                 margin-top: 25%;
+            }
+
+            &.purple{
+                
+                text-shadow: 3px 3px 5px $color1;
             }
         }
     }

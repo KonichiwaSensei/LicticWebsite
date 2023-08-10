@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ReactSwitch from "react-switch"
+import { ThemeContext } from "../ThemeContext";
 
 export default function ThemeSelector() {
 
     const [checked, setChecked] = useState(false);
-    const [theme, setTheme] = useState("red")
 
+    const { theme, setTheme } = useContext(ThemeContext);
 
     const handleChange = nextChecked => {
         setChecked(nextChecked);

@@ -48,7 +48,7 @@ export default function LicticLogoModel() {
             // onMouseLeave={handleMouseLeave}
         >
             <Canvas
-                // style={{ width: "200px", height: "200px" }}
+                // style={{ width: "inherit", height: "inherit" }}
             >
                 {/* <OrbitControls/> */}
                 <Environment files="/images/abandoned_tiled_room_1k.hdr" />
