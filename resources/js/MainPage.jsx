@@ -1,10 +1,15 @@
-import LicticLogoModel from "./ThreejsModels/LicticLogoModel"
-import Navigator from "./navigation/Navigator"
-
 export default function MainPage() {
     return (
-        <>
-            {/* <h1>Hello World, Main Page here</h1> */}
-        </>
+        <div className="main_page">
+            {/* <div className="main_page_back">
+                <h1>Welcome</h1>
+            </div> */}
+
+            <div className="main_page_front">
+                <h1 className="welcome_message start">Welcome to the</h1>
+                <h1 className="welcome_message end">website</h1>
+            </div>
+
+        </div>
     )
 }

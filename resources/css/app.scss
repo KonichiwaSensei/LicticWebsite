@@ -16,17 +16,25 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/public/fonts/Audiowide-Regular.woff2') format('woff2'),
+        url('/public/fonts/Audiowide-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @import './Navigator.scss';
 @import './MainPage.scss';
+
+$font_family: Audiowide, Josefin Sans;
 
 $color1: #D6003D;
 $color2: #575756;
 $color3: #2E1E3A;
 $color4: #ffffff;
 $color5: #000000;
-
-$font_family: Josefin Sans;
 
 *,
 *:before,
@@ -48,6 +56,24 @@ body {
     overflow-x: hidden;
     // display: flex;
     // flex-direction: column;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../public/images/mascotcolored.svg');
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: -500px;
+        opacity: 0.3;
+        /* Set the opacity for the background image */
+
+        /* Set a z-index to position the background behind other content */
+        z-index: -5;
+    }
 }
 
 .theejs_render {

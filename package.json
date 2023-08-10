@@ -17,6 +17,7 @@
         "@vitejs/plugin-react": "^4.0.4",
         "react": "^18.2.0",
         "react-burger-menu": "^3.0.9",
+        "react-fast-marquee": "^1.6.0",
         "react-router-dom": "^6.14.2",
         "sass": "^1.64.2",
         "three": "^0.155.0"

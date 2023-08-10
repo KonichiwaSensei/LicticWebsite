@@ -4,4 +4,36 @@ $color3: #2E1E3A;
 $color4: #ffffff;
 $color5: #000000;
 
+.main_page {
+    width: 100vw;
+    height: 100vh;
 
+    .main_page_back {
+        z-index: -1;
+
+    }
+
+    .main_page_front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        
+
+        // width: inherit;
+        // height: inherit;
+
+        .welcome_message{
+            padding: 5%;
+            font-size: 50px;
+            text-shadow: 3px 3px 5px $color3;
+
+            &.end{
+                margin-top: 25%;
+            }
+        }
+    }
+
+
+
+}
