@@ -27,6 +27,7 @@
 
 @import './Navigator.scss';
 @import './MainPage.scss';
+@import './AboutMe.scss';
 
 $font_family: Audiowide, Josefin Sans;
 
@@ -54,8 +55,6 @@ body {
     color: $color4;
     background-color: $color1;
     overflow-x: hidden;
-    // display: flex;
-    // flex-direction: column;
 
     &::before {
         content: "";
@@ -69,9 +68,6 @@ body {
         background-size: 150%;
         background-position: -500px;
         opacity: 0.3;
-        /* Set the opacity for the background image */
-
-        /* Set a z-index to position the background behind other content */
         z-index: -5;
     }
 }

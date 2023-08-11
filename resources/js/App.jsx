@@ -1,6 +1,7 @@
 import LicticLogoModel from "./ThreejsModels/LicticLogoModel"
 import Navigator from "./Constants/Navigator"
-import MainPage from "./MainPage"
+import MainPage from "./MainPage/MainPage"
+import AboutMe from "./AboutMe"
 
 import { ThemeContext } from "./ThemeContext"
 
@@ -33,6 +34,7 @@ export default function App() {
 
                     <Routes>
                         <Route path="/" element={<MainPage />} />
+                        <Route path="/about-me" element={<AboutMe />} />
                     </Routes>
 
                 </BrowserRouter>

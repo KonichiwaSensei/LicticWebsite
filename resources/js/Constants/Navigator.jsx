@@ -4,6 +4,7 @@ import TopMarquee from "./TopMarquee"
 import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import { ThemeContext } from "../ThemeContext"
+import BottomMarquee from "./BottomMarquee"
 
 export default function Navigator() {
 
@@ -50,8 +51,10 @@ export default function Navigator() {
                     <Link to="/" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>Home</Link>
                     <Link to="/music" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>Music</Link>
                     <Link to="/web" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>Web</Link>
-                    <Link to="/about_me" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>About Me</Link>
+                    <Link to="/about-me" className={"nav_menu_link" + " " + theme} onClick={handleLinkClick}>About Me</Link>
                 </div>
+
+                <BottomMarquee />
             </div>
         </>
     )
