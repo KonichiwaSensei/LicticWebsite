@@ -179,6 +179,11 @@ $color5: #000000;
                 text-shadow: 3px 3px 5px $color4;
 
             }
+
+            &:nth-child(2),
+            &:nth-child(3){
+                margin-left: 100px;
+            }
         }
         .nav_menu_link.purple{
             text-shadow: 3px 3px 5px $color1;

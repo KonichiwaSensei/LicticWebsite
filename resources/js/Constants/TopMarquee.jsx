@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-import { ThemeContext } from "../ThemeContext";
+import { ThemeContext } from "../Contexts/ThemeContext";
 import { useContext } from "react";
 
 export default function TopMarquee() {

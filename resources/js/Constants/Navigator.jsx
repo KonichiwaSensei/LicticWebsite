@@ -1,10 +1,14 @@
 import ThemeSelector from "./ThemeSelector"
 import TopMarquee from "./TopMarquee"
-
-import { useContext, useState } from "react"
-import { Link } from "react-router-dom"
-import { ThemeContext } from "../ThemeContext"
 import BottomMarquee from "./BottomMarquee"
+
+import { useContext, useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+
+import { ThemeContext } from "../Contexts/ThemeContext"
+import { ModelTransformContext } from "../Contexts/ModelTransformContext"
+
+
 
 export default function Navigator() {
 
@@ -14,24 +18,44 @@ export default function Navigator() {
 
     const { theme } = useContext(ThemeContext);
 
+    useEffect(() => {
+        if (theme === "red") {
+            document.body.style.backgroundColor = "#D6003D";
+        } else if (theme === "purple") {
+            document.body.style.backgroundColor = "#2E1E3A";
+        }
+    }, [theme]);
+
+    // const { modelTransformation, setModelTransformation } = useContext(ModelTransformContext);
+
+    // const transformationMapping = {
+    //     "/": { rotationX: 0, rotationY: 0 },
+    //     "/music": { rotationX: Math.PI / 2, rotationY: 0 },
+    //     "/web": { rotationX: 0, rotationY: Math.PI / 2 },
+    //     "/about-me": { rotationX: Math.PI / 4, rotationY: Math.PI / 4 },
+    // };
 
     const handleMenuDisplay = () => {
-        if (!menuClick) {
-            setBurgerClass("burger-bar clicked")
-            setMenuClass("menu visible")
-        }
-        else {
-            setBurgerClass("burger-bar unclicked")
-            setMenuClass("menu hidden")
-        }
-        setMenuClick(!menuClick)
-    }
-
-    const handleLinkClick = () => {
-        setBurgerClass("burger-bar unclicked");
-        setMenuClass("menu hidden");
-        setMenuClick(false);
+        const newBurgerClass = menuClick ? "burger-bar unclicked" : "burger-bar clicked";
+        const newMenuClass = menuClick ? "menu hidden" : "menu visible";
+    
+        setTimeout(() => {
+            setBurgerClass(newBurgerClass);
+            setMenuClass(newMenuClass);
+            setMenuClick(!menuClick);
+        }, 0);
     };
+    
+    const handleLinkClick = () => {
+        const newBurgerClass = "burger-bar unclicked";
+        const newMenuClass = "menu hidden";
+    
+        setTimeout(() => {
+            setBurgerClass(newBurgerClass);
+            setMenuClass(newMenuClass);
+            setMenuClick(false);
+        }, 0);
+    }
 
     return (
         <>

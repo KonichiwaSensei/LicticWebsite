@@ -15,8 +15,6 @@ $color5: #000000;
     .main_page_front {
         display: flex;
         flex-direction: column;
-        width: inherit;
-        height: inherit;
 
         .welcome_text {
             display: flex;
@@ -27,13 +25,14 @@ $color5: #000000;
             animation: grow 2s infinite;
 
             .welcome_message {
-                padding: 5%;
+                padding: 20px;
+                margin-top: 100px;
                 font-size: 50px;
                 text-shadow: 3px 3px 5px $color3;
                 transition: 0.5s ease-in-out;
 
                 &.end {
-                    margin-top: 25%;
+                    margin-top: 450px;
                 }
 
                 &.purple {
@@ -44,16 +43,16 @@ $color5: #000000;
         }
 
         .welcome_embed_div {
-            position: relative;
-
+            position: absolute;
+            
             &.youtube{
-                bottom: 80%;
+                bottom: 34em;
                 left: 10%;
                 width: 150px;
             }
 
             &.soundcloud{
-                bottom: 50%;
+                bottom: 7em;
                 left: 15%;
                 width: 150px;
             }

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useRef } from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
-import { useRef } from "react";
+
+import { ModelTransformContext } from "../Contexts/ModelTransformContext";
 
 export default function LicticLogoModel() {
 
@@ -11,8 +13,11 @@ export default function LicticLogoModel() {
         const gltf = useLoader(GLTFLoader, "/images/LicticLogoTest.glb");
         const modelRef = useRef();
 
+        // const { modelTransformation, setModelTransformation } = useContext(ModelTransformContext);
+
         useFrame(() => {
             if (modelRef.current) {
+                // const { rotationX, rotationY } = modelTransformation;
                 modelRef.current.rotation.x = mouseOffset.y * 0.1;
                 modelRef.current.rotation.y = mouseOffset.x * 0.1;
             }
@@ -45,16 +50,19 @@ export default function LicticLogoModel() {
         <div
             className="theejs_render"
             onMouseMove={handleMouseMove}
-            // onMouseLeave={handleMouseLeave}
+        // onMouseLeave={handleMouseLeave}
         >
             <Canvas
-                // style={{ width: "inherit", height: "inherit" }}
+            // style={{ width: "inherit", height: "inherit" }}
             >
                 {/* <OrbitControls/> */}
                 <Environment files="/images/abandoned_tiled_room_1k.hdr" />
                 {/* <ambientLight intensity={1}/> */}
                 {/* <pointLight position={[0, 1, 0]} intensity={100}/> */}
-                <Model mouseOffset={mouseOffset} />
+                <Model
+                    mouseOffset={mouseOffset}
+                    // transformation={modelTransformation}
+                />
             </Canvas>
         </div>
     );

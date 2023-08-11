@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import ReactSwitch from "react-switch"
-import { ThemeContext } from "../ThemeContext";
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 export default function ThemeSelector() {
 

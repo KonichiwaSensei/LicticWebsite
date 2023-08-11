@@ -3,7 +3,8 @@ import Navigator from "./Constants/Navigator"
 import MainPage from "./MainPage/MainPage"
 import AboutMe from "./AboutMe"
 
-import { ThemeContext } from "./ThemeContext"
+import { ThemeContext } from "./Contexts/ThemeContext"
+import { ModelTransformContext } from "./Contexts/ModelTransformContext"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -13,6 +14,9 @@ import { useEffect, useState } from "react"
 export default function App() {
 
     const [theme, setTheme] = useState("red")
+
+    // const [modelTransformation, setModelTransformation] = useState({rotationX: 0, rotationY: 0 });
+
 
     useEffect(() => {
         if (theme === "red") {
@@ -24,21 +28,21 @@ export default function App() {
 
     return (
         <>
-            <ThemeContext.Provider value={{theme, setTheme}}>
+            <ThemeContext.Provider value={{ theme, setTheme }}>
+                {/* <ModelTransformContext.Provider value={{modelTransformation, setModelTransformation}}> */}
+                    <BrowserRouter>
 
-                <BrowserRouter>
+                        <Navigator />
 
-                    <Navigator />
+                        <LicticLogoModel />
 
-                    <LicticLogoModel />
+                        <Routes>
+                            <Route path="/" element={<MainPage />} />
+                            <Route path="/about-me" element={<AboutMe />} />
+                        </Routes>
 
-                    <Routes>
-                        <Route path="/" element={<MainPage />} />
-                        <Route path="/about-me" element={<AboutMe />} />
-                    </Routes>
-
-                </BrowserRouter>
-
+                    </BrowserRouter>
+                {/* </ModelTransformContext.Provider> */}
             </ThemeContext.Provider>
         </>
     )

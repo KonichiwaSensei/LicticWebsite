@@ -1,4 +1,4 @@
-import { ThemeContext } from "../ThemeContext";
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 import { useContext, useState } from "react";
 import EmbedFrame from "./EmbedFrame";
@@ -11,7 +11,7 @@ export default function MainPage() {
     const youTubePlaylistId = "PL2Ji0h42fuIV-z2rCKCg_pxeNZseKsmBL";
     const youTubeUrl = `https://www.youtube.com/embed/videoseries?list=${youTubePlaylistId}`;
 
-    const soundCloudUrl = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1354493554&color=%23575756&auto_play=true&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    const soundCloudUrl = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1354493554&color=%23575756&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"
 
     const handleShakeStart = () => {
         if (shakingAnimation) {

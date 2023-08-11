@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ThemeContext } from './ThemeContext'
+import { ThemeContext } from './Contexts/ThemeContext'
 
 export default function AboutMe() {
 
