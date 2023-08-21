@@ -15,6 +15,7 @@ export default function Web() {
                 <p className={`web_para ${theme}`}>
                     My current web projects are this website and:
                 </p>
+                <embed className={`web_embed ${theme}`} src="https://mw2camotracker.codeboot.cz/tracker"></embed>
             </div>
 
         </div>
