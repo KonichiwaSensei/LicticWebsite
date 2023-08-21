@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../Contexts/ThemeContext'
+import Lottie from 'lottie-react'
+import LicticLogoAnimation from '../../../public/images/LottieJsons/LicticLogoAnimation.json'
 
 export default function Music() {
 
@@ -15,6 +17,7 @@ export default function Music() {
                 <p className={`music_para ${theme}`}>
                     My current music projects are:
                 </p>
+                <Lottie className='music_lottie' animationData={LicticLogoAnimation}  />
             </div>
 
         </div>
