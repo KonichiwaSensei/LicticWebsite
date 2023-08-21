@@ -1,7 +1,7 @@
 import { ThemeContext } from "../Contexts/ThemeContext";
 
 import { useContext, useState } from "react";
-import EmbedFrame from "./EmbedFrame";
+import EmbedFrame from "../Constants/EmbedFrame";
 
 export default function MainPage() {
 

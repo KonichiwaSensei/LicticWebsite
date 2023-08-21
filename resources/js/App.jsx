@@ -1,13 +1,17 @@
 import LicticLogoModel from "./ThreejsModels/LicticLogoModel"
 import Navigator from "./Constants/Navigator"
-import MainPage from "./MainPage/MainPage"
-import AboutMe from "./AboutMe"
+import MainPage from "./Pages/MainPage"
+import AboutMe from "./Pages/AboutMe"
+import Web from "./Pages/Web"
+import Music from "./Pages/Music"
 
 import { ThemeContext } from "./Contexts/ThemeContext"
 import { ModelTransformContext } from "./Contexts/ModelTransformContext"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useEffect, useState } from "react"
+
+
 
 
 
@@ -38,7 +42,11 @@ export default function App() {
 
                         <Routes>
                             <Route path="/" element={<MainPage />} />
+                            <Route path="/music" element={<Music />} />
+                            <Route path="/web" element={<Web />} />
+                            
                             <Route path="/about-me" element={<AboutMe />} />
+                            
                         </Routes>
 
                     </BrowserRouter>
