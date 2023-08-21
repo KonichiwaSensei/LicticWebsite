@@ -33,20 +33,21 @@ export default function MainPage() {
                     <h1 className={`welcome_message start ${theme}`}>Welcome to the</h1>
                     <h1 className={`welcome_message end ${theme}`}>website</h1>
                 </div>
-                <div className="welcome_embed_div youtube">
-                    <EmbedFrame
-                        pClassName={`embed_label ${theme}`} pText={"YouTube"}
-                        iframeClassName={`${theme}`}
-                        url={youTubeUrl}
-                    />
-                </div>
-                <div className="welcome_embed_div soundcloud">
-                    <EmbedFrame
-                        pClassName={`embed_label ${theme}`} pText={"SoundCloud"}
-                        iframeClassName={`${theme}`}
-                        url={soundCloudUrl}
-                    />
-
+                <div className="welcome_embeds">
+                    <div className="welcome_embed_div youtube">
+                        <EmbedFrame
+                            pClassName={`embed_label ${theme}`} pText={"YouTube"}
+                            iframeClassName={`${theme}`}
+                            url={youTubeUrl}
+                        />
+                    </div>
+                    <div className="welcome_embed_div soundcloud">
+                        <EmbedFrame
+                            pClassName={`embed_label ${theme}`} pText={"SoundCloud"}
+                            iframeClassName={`${theme}`}
+                            url={soundCloudUrl}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

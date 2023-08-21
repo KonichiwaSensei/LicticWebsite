@@ -9,6 +9,8 @@ import { ModelTransformContext } from "../Contexts/ModelTransformContext";
 
 export default function LicticLogoModel() {
 
+    const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+
     const Model = ({ mouseOffset }) => {
         const gltf = useLoader(GLTFLoader, "/images/LicticLogoTest.glb");
         const modelRef = useRef();
@@ -30,7 +32,6 @@ export default function LicticLogoModel() {
         );
     };
 
-    const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (event) => {
         const { clientX, clientY } = event;
@@ -52,13 +53,11 @@ export default function LicticLogoModel() {
             onMouseMove={handleMouseMove}
         // onMouseLeave={handleMouseLeave}
         >
-            <Canvas
-            // style={{ width: "inherit", height: "inherit" }}
-            >
+            <Canvas>
                 {/* <OrbitControls/> */}
+                
                 <Environment files="/images/abandoned_tiled_room_1k.hdr" />
-                {/* <ambientLight intensity={1}/> */}
-                {/* <pointLight position={[0, 1, 0]} intensity={100}/> */}
+
                 <Model
                     mouseOffset={mouseOffset}
                     // transformation={modelTransformation}
