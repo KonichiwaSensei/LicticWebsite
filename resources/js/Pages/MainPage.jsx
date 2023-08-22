@@ -24,15 +24,13 @@ export default function MainPage() {
 
     return (
         <div className="main_page">
-            {/* <div className="main_page_back">
-                <h1>Welcome</h1>
-            </div> */}
-
-            <div className="main_page_front">
+            <div className="main_page_back">
                 <div className="welcome_text">
                     <h1 className={`welcome_message start ${theme}`}>Welcome to the</h1>
                     <h1 className={`welcome_message end ${theme}`}>website</h1>
                 </div>
+            </div>
+            <div className="main_page_front">
                 <div className="welcome_embeds">
                     <div className="welcome_embed_div youtube">
                         <EmbedFrame
