@@ -5,6 +5,9 @@ import BottomMarquee from "./BottomMarquee"
 import { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
+import Lottie from 'lottie-react'
+import LottieArrowRightPurple from '../../../public/images/LottieJsons/LottieArrowRightPurple.json'
+
 import { ThemeContext } from "../Contexts/ThemeContext"
 import { ModelTransformContext } from "../Contexts/ModelTransformContext"
 
@@ -69,6 +72,8 @@ export default function Navigator() {
                     <div className={burgerClass + " " + theme}></div>
                 </div>
 
+                {/* <Lottie className={"burger_click_me" + " " + theme} animationData={LottieArrowRightPurple} /> */}
+                
                 <ThemeSelector />
 
                 <div className={menuClass + " " + theme}>

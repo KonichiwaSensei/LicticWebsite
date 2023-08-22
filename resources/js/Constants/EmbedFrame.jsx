@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Lottie from 'lottie-react'
+import LottieCirclesAnimation from '../../../public/images/LottieJsons/LottieCirclesAnimation.json'
 
 export default function EmbedFrame({pText, pClassName, iframeClassName, url}) {
 
@@ -28,7 +30,10 @@ export default function EmbedFrame({pText, pClassName, iframeClassName, url}) {
                 // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 loading="lazy"
                 allowFullScreen
-            ></iframe>
+            >
+                
+            </iframe>
+            <Lottie className={`embed_lottie_animation ${pText}`} animationData={LottieCirclesAnimation}/>
         </>
     )
 }

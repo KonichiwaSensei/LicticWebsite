@@ -109,6 +109,19 @@ $color5: #000000;
                     }
                 }
 
+                .embed_lottie_animation{
+                    position: absolute;
+                    align-self: center;
+                    right: -130px;
+                    top: -100px;
+                    width: 400px;
+                    z-index: -1;
+
+                    &.YouTube{
+                        grid-area: YouTube;
+                    }
+                }
+
                 iframe {
                     width: 100%;
 
