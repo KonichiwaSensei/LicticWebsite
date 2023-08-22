@@ -62,10 +62,10 @@ $color5: #000000;
 
         position: absolute;
         right: 0;
-        width: 80px;
+        width: 60px;
         height: 46px;
         margin-top: 40px;
-        margin-right: 4.5%;
+        margin-right: 8.5%;
         cursor: pointer;
         z-index: 4;
 
@@ -82,7 +82,7 @@ $color5: #000000;
                 background-color: $color3;
                 border-radius: 2px;
                 box-shadow: 1px -3px 4px $color4;
-                transform: rotate(45deg) translate(1.5em, 1.25em) scale(0.8, 1);
+                transform: rotate(45deg) translate(2em, 5em) scale(0.8, 1);
                 transition: 0.5s ease-in;
 
             }
@@ -90,7 +90,7 @@ $color5: #000000;
             &.clicked:nth-child(2) {
                 background-color: $color3;
                 box-shadow: -1px -3px 4px $color4;
-                transform: rotate(135deg) translate(1.63em, -0.93em) scale(0.33, 1);
+                transform: rotate(135deg) translate(5.15em, -1.3em) scale(0.33, 1);
                 transition: 0.5s ease-in;
 
             }
@@ -98,7 +98,7 @@ $color5: #000000;
             &.clicked:nth-child(3) {
                 background-color: $color3;
                 box-shadow: -3px -3px 4px $color4;
-                transform: rotate(135deg) translate(-1.22em, -0.23em) scale(0.37, 1);
+                transform: rotate(135deg) translate(2.75em, -0.6em) scale(0.37, 1);
                 transition: 0.5s ease-in;
             }
 
@@ -227,14 +227,60 @@ $color5: #000000;
     @media (max-width: 820px) {
 
         .burger_menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            
+            .burger-bar{
 
-            position: absolute;
-            right: 0;
-            width: 80px;
-            height: 46px;
+                &.clicked:nth-child(1) {
+                    background-color: $color3;
+                    border-radius: 2px;
+                    box-shadow: 1px -3px 4px $color4;
+                    transform: rotate(45deg) translate(1em, 2em) scale(0.8, 1);
+                    transition: 0.5s ease-in;
+    
+                }
+    
+                &.clicked:nth-child(2) {
+                    background-color: $color3;
+                    box-shadow: -1px -3px 4px $color4;
+                    transform: rotate(135deg) translate(2.15em, -.4em) scale(0.33, 1);
+                    transition: 0.5s ease-in;
+    
+                }
+    
+                &.clicked:nth-child(3) {
+                    background-color: $color3;
+                    box-shadow: -3px -3px 4px $color4;
+                    transform: rotate(135deg) translate(-0.25em, 0.35em) scale(0.37, 1);
+                    transition: 0.5s ease-in;
+                }
+
+                &.unclicked {
+                    transition: 0.5s ease-in;
+                }
+            }
+
+            &:hover,
+            &:active {
+                .burger-bar {
+                    background-color: $color3;
+                    box-shadow: 3px 3px 5px $color4;
+    
+                    &.clicked {
+                        background-color: $color4;
+                        box-shadow: 0px -3px 5px $color3;
+                    }
+                }
+    
+                .burger-bar.purple {
+                    background-color: $color1;
+                    box-shadow: 3px 3px 5px $color4;
+    
+                    &.clicked {
+                        background-color: $color4;
+                        box-shadow: 0px -3px 5px $color1;
+                    }
+                }
+            }
         }
 
         .menu {
