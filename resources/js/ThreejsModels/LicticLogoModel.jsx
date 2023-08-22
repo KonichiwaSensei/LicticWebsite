@@ -43,6 +43,18 @@ export default function LicticLogoModel() {
         setMouseOffset({ x: offsetX, y: offsetY });
     };
 
+    const handleTouchMove = (event) => {
+        if (event.touches.length === 1) {
+            const touch = event.touches[0];
+            const rect = event.currentTarget.getBoundingClientRect();
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const offsetX = (touch.clientX - rect.left - centerX) * 0.005;
+            const offsetY = (touch.clientY - rect.top - centerY) * 0.005;
+            setMouseOffset({ x: offsetX, y: offsetY });
+        }
+    };
+
     // const handleMouseLeave = (event) => {
     //     setMouseOffset({ x: 0, y: 0 });
     // };
@@ -51,9 +63,7 @@ export default function LicticLogoModel() {
         <div
             className="theejs_render"
             onMouseMove={handleMouseMove}
-        onTouchMove={handleMouseMove}
-            // onTouchStartCapture={handleMouseMove}
-            // onTouchEndCapture={handleMouseMove}
+            onTouchMove={handleTouchMove}
         // onMouseLeave={handleMouseLeave}
         >
             <Canvas>
