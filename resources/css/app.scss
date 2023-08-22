@@ -51,12 +51,14 @@ html {
     font-family: $font_family;
     font-weight: 800;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
     color: $color4;
     background-color: $color1;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     &::before {
         content: "";
@@ -72,7 +74,7 @@ body {
         opacity: 0.3;
         z-index: -5;
 
-        @media (max-width: 768px) {
+        @media (max-width: 820px) {
             background-size: 250%;
             background-position: -400px;
         }
@@ -84,7 +86,7 @@ body {
     height: 100vh;
     position: absolute;
 
-    @media (max-width: 768px) {
+    @media (max-width: 820px) {
         width: 100vw;
         height: 50vh;
         top: 20%;
