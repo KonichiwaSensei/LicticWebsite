@@ -71,12 +71,22 @@ body {
         background-position: -500px;
         opacity: 0.3;
         z-index: -5;
+
+        @media (max-width: 768px) {
+            background-size: 250%;
+            background-position: -400px;
+        }
     }
 }
 
 .theejs_render {
     width: 100vw;
     height: 100vh;
-
     position: absolute;
+
+    @media (max-width: 768px) {
+        width: 100vw;
+        height: 50vh;
+        top: 20%;
+    }
 }

@@ -17,8 +17,10 @@ export default function EmbedFrame({pText, pClassName, iframeClassName, url}) {
         <>
             <p className={`${pClassName} ${shakingAnimation}`}>{pText}</p>
             <iframe
-                onMouseEnter={handleShakeStart}
-                onMouseLeave={handleShakeStart}
+                // onMouseEnter={handleShakeStart}
+                // onMouseLeave={handleShakeStart}
+                // onTouchStart={handleShakeStart}
+                // onTouchEnd={handleShakeStart}
                 className={`${iframeClassName} ${shakingAnimation}`}
                 src={url}
                 title="Lictic Embed"

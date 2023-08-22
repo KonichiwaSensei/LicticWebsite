@@ -51,17 +51,21 @@ export default function LicticLogoModel() {
         <div
             className="theejs_render"
             onMouseMove={handleMouseMove}
+        onTouchMove={handleMouseMove}
+            // onTouchStartCapture={handleMouseMove}
+            // onTouchEndCapture={handleMouseMove}
         // onMouseLeave={handleMouseLeave}
         >
             <Canvas>
                 {/* <OrbitControls/> */}
-                
+
                 <Environment files="/images/abandoned_tiled_room_1k.hdr" />
 
                 <Model
                     mouseOffset={mouseOffset}
-                    // transformation={modelTransformation}
+                // transformation={modelTransformation}
                 />
+
             </Canvas>
         </div>
     );

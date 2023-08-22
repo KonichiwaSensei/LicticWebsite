@@ -26,13 +26,13 @@ $color5: #000000;
 
             .welcome_message {
                 padding: 10px;
-                margin-top: 100px;
+                margin-top: 6.5%;
                 font-size: 50px;
                 text-shadow: 3px 3px 5px $color3;
                 transition: 0.5s ease-in-out;
 
                 &.end {
-                    margin-top: 9em;
+                    margin-top: 30%;
                 }
 
                 &.purple {
@@ -41,45 +41,46 @@ $color5: #000000;
                 }
             }
         }
-        .welcome_embeds{
+
+        .welcome_embeds {
 
             .welcome_embed_div {
                 position: absolute;
-                
-                &.youtube{
+
+                &.youtube {
                     bottom: 34em;
                     left: 10%;
                     width: 150px;
                 }
-    
-                &.soundcloud{
+
+                &.soundcloud {
                     bottom: 7em;
                     left: 15%;
                     width: 150px;
                 }
-    
-    
-                .embed_label{
+
+
+                .embed_label {
                     text-align: center;
                     z-index: -2;
-    
-                    &.shaking_animation{
+
+                    &.shaking_animation {
                         animation: shake 1s infinite;
                     }
                 }
-    
+
                 iframe {
                     width: 100%;
-                    
+
                     border-radius: 2em;
                     box-shadow: 0px 0px 20px $color3;
                     z-index: 2;
                     transition: 0.5s ease-in-out;
-    
+
                     &.purple {
                         box-shadow: 0px 0px 20px $color1;
                     }
-    
+
                     &.shaking_animation {
                         animation: shake 1s infinite;
                     }
@@ -87,39 +88,84 @@ $color5: #000000;
             }
 
         }
-        
+
+    }
+
+    @media (max-width: 768px) {
+
+        .main_page_front {
+
+
+            .welcome_text {
+                
+
+                .welcome_message {
+                    font-size: 30px;
+                    margin-top: 45%;
+
+                    &.end {
+                        margin-top: 70%;
+                    }
+                }
+            }
+
+            .welcome_embeds {
+
+                .welcome_embed_div {
+                    transform: scale(0.7);
+
+                    &.youtube {
+                        bottom: 1em;
+                        left: 10%;
+                        width: 150px;
+                        
+                    }
+    
+                    &.soundcloud {
+                        bottom: 1em;
+                        left: 55%;
+                        width: 150px;
+                        
+                    }
+                }
+            }
+        }
     }
 
 }
 
-@keyframes shake {
 
-    0%,
-    100% {
-        transform: translateX(2px) rotate(0deg);
+    @keyframes shake {
+
+        0%,
+        100% {
+            transform: translateX(2px) rotate(0deg);
+        }
+
+        25% {
+            transform: translateX(0px) rotate(2deg);
+        }
+
+        50% {
+            transform: translateX(-2px) rotate(0deg);
+        }
+
+        75% {
+            transform: translateX(0px) rotate(-2deg);
+        }
+
     }
 
-    25% {
-        transform: translateX(0px) rotate(2deg);
-    }
+    @keyframes grow {
 
-    50% {
-        transform: translateX(-2px) rotate(0deg);
-    }
+        0%,
+        100% {
+            transition: 0.1s ease-in-out;
+            transform: scale(1);
+        }
 
-    75% {
-        transform: translateX(0px) rotate(-2deg);
+        50% {
+            transition: 0.1s ease-in-out;
+            transform: scale(1.01);
+        }
     }
-
-}
-
-@keyframes grow {
-    0%,100% {
-        transition: 0.1s ease-in-out;
-        transform: scale(1);
-    }
-    50% {
-        transition: 0.1s ease-in-out;
-        transform: scale(1.01);
-    }
-}
