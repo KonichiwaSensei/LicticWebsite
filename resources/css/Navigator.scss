@@ -206,6 +206,10 @@ $color5: #000000;
             &:nth-child(3) {
                 margin-left: 130px;
             }
+
+            &:nth-child(4) {
+                margin-left: -40px;
+            }
         }
 
         .nav_menu_link.purple {
@@ -249,7 +253,8 @@ $color5: #000000;
                 font-size: 3vw;
 
                 &:nth-child(2),
-                &:nth-child(3) {
+                &:nth-child(3),
+                &:nth-child(4) {
                     margin-left: 0;
                 }
 

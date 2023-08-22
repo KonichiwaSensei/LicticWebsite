@@ -11,7 +11,9 @@ import { ModelTransformContext } from "./Contexts/ModelTransformContext"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-
+import Lottie from 'lottie-react'
+import LottieAudioWaveRed from '../../public/images/LottieJsons/LottieAudioWaveRed.json'
+import LottieAudioWavePurple from '../../public/images/LottieJsons/LottieAudioWavePurple.json'
 
 
 
@@ -19,14 +21,18 @@ export default function App() {
 
     const [theme, setTheme] = useState("red")
 
+    const [lottieAnimationColour, setLottieAnimationColour] = useState(LottieAudioWavePurple)
+
     // const [modelTransformation, setModelTransformation] = useState({rotationX: 0, rotationY: 0 });
 
 
     useEffect(() => {
         if (theme === "red") {
             document.body.style.backgroundColor = "#D6003D";
+            setLottieAnimationColour(LottieAudioWavePurple)
         } else if (theme === "purple") {
             document.body.style.backgroundColor = "#2E1E3A";
+            setLottieAnimationColour(LottieAudioWaveRed)
         }
     }, [theme]);
 
@@ -48,6 +54,8 @@ export default function App() {
                             <Route path="/about-me" element={<AboutMe />} />
                             
                         </Routes>
+
+                        <Lottie className={'lottie_audio_animation' + ' ' + theme} animationData={lottieAnimationColour} />
 
                     </BrowserRouter>
                 {/* </ModelTransformContext.Provider> */}
